@@ -1,0 +1,28 @@
+SELECT fname, lname, patronus FROM characters  WHERE patronus is not null;
+SELECT * FROM characters WHERE lname like '%e';
+SELECT sum(age) FROM characters WHERE age is not null;
+SELECT fname, lname, age FROM characters order by age desc;
+SELECT fname, age FROM characters WHERE age between 50 and 100;
+SELECT distinct age FROM characters;
+SELECT * FROM characters WHERE faculty = 'Gryffindor' and age > 30;
+SELECT distinct faculty FROM characters limit 3;
+SELECT * FROM characters
+ WHERE fname like 'H%' and LENGTH(fname) = 5 or fname like 'L%';
+ SELECT avg(age) FROM characters;
+delete FROM characters WHERE char_id = 11;
+SELECT * FROM characters WHERE fname like '%a%';
+SELECT replace('fname', 'Half-Blood','Prince');
+SELECT char_id, fname from characters  WHERE patronus is not null order by fname asc;
+SELECT * FROM characters
+WHERE fname or lname in ('Crabbe', 'Granger ', 'Diggory');
+SELECT min(age) FROM characters;
+SELECT fname FROM characters
+union 
+SELECT book_name FROM library;
+SELECT count(faculty) FROM characters group by faculty having count(faculty) > 1 order by  COUNT(faculty) desk;
+SELECT fname, lname,
+case
+    when faculty ('Gryffindor') then 'Godric'
+    when faculty ('Slytherin') then 'Salazar'
+    else 'Muggle' from characters;
+    SELECT * FROM characters WHERE fname not like 'H%' or 'L%' or 'S%';
